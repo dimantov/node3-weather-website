@@ -8,7 +8,8 @@ const forecast = (lat, long, callback) => {
         }else if (body.error){
             callback('The given location is invalid');
         }else{
-            callback(undefined, `It is currently ${body.currently.temperature} degrees outside with ${body.currently.precipProbability} probability of precipitation`)
+            callback(undefined, `It is currently ${body.currently.temperature} degrees outside with ${body.currently.precipProbability} probability of precipitation
+            Air pressure is ${body.currently.pressure} bar`);
         }
     })
 }
